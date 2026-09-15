@@ -1,0 +1,12 @@
+apiVersion: aws.m.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: customer-a
+  namespace: customer-a
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      name: customer-a-aws
+      namespace: customer-a
+      key: credentials
