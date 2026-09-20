@@ -1,1 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: customer-a
+  namespace: argocd
+spec:
+  project: default
 
+  source:
+    repoURL: https://github.com/satishnaga1/customer-a-gitops.git
+    targetRevision: main
+    path: crossplane/customer-a
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: customer-a
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
