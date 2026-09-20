@@ -1,0 +1,13 @@
+apiVersion: ec2.aws.upbound.io/v1beta1
+kind: InstanceState
+metadata:
+  name: customer-a-test2-state
+  namespace: customer-a
+spec:
+  forProvider:
+    instanceIdRef:
+      name: customer-a-test2
+    region: ap-south-1
+    state: stopped
+  providerConfigRef:
+    name: customer-a
