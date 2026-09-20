@@ -1,4 +1,4 @@
-apiVersion:  ec2.aws.m.upbound.io/v1beta1
+apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: Instance
 metadata:
   name: customer-a-test1
@@ -13,3 +13,4 @@ spec:
       Customer: customer-a
   providerConfigRef:
     name: customer-a
+    kind: ProviderConfig
