@@ -1,13 +1,15 @@
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: Instance
 metadata:
-  name: customer-a-ec2
+  name: customer-a-test
   namespace: customer-a
 spec:
   forProvider:
     region: ap-south-1
-    instanceType: t3.micro
-    ami: ami-XXXXXXXXXXXXXXX
+    instanceType: t2.micro
+    ami: ami-066c4849e6b3a1e3d
+    tags:
+      Name: customer-a-test
+      Customer: customer-a
   providerConfigRef:
     name: customer-a
-    kind: ProviderConfig
