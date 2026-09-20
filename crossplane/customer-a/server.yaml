@@ -8,6 +8,7 @@ spec:
     region: ap-south-1
     instanceType: t2.micro
     ami: ami-066c4849e6b3a1e3d
+    state: stopped
     tags:
       Name: customer-a-test2
       Customer: customer-a
