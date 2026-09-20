@@ -8,6 +8,6 @@ spec:
     instanceIdRef:
       name: customer-a-test2
     region: ap-south-1
-    state: stopped
+    state: started
   providerConfigRef:
     name: customer-a
